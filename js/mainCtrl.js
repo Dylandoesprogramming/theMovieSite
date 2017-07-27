@@ -18,8 +18,7 @@ app.controller("mainCtrl", function($scope, $window, mainSrvc) {
         }
 
     }
-    if ($)
-        $scope.getPopMovies($scope.popMovies);
+    $scope.getPopMovies($scope.popMovies);
 
     $scope.changeMovie = function(movie) {
         $scope.curMovie = movie;
