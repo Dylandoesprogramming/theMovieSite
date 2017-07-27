@@ -1,0 +1,9 @@
+<navbar>
+    <ul>
+        <li ng-click="resetMovies()" ui-sref="home" class="link">Home</li>
+        <!-- <li ui-sref="about" class="link">About</li> -->
+        <li>
+            <input type="text" ng-model="search" placeholder="Search for Movies"><button ng-click='findMovie(search)' ui-sref="search" type=" button ">&#128269;</button>
+        </li>
+    </ul>
+</navbar>

@@ -1,0 +1,16 @@
+<top-bar></top-bar>
+<div id="detailContainer">
+    <div id="title">
+        <h1>{{curMovie.original_title}}</h1>
+    </div>
+    <img id="curPoster" ng-src="https://image.tmdb.org/t/p/w342{{curMovie.poster_path}}">
+    <div class="rating">
+        <span id="star0">&#9733</span>
+        <span ng-if="!rating.stars[0]" id="star1">☆</span> <span ng-if="rating.stars[0]" id="star1 ">&#9733</span>
+        <span ng-if="!rating.stars[1]" id="star2">☆</span> <span ng-if="rating.stars[1]" id="star2 ">&#9733</span>
+        <span ng-if="!rating.stars[2]" id="star3">☆</span> <span ng-if="rating.stars[2]" id="star3 ">&#9733</span>
+        <span ng-if="!rating.stars[3]" id="star4">☆</span> <span ng-if="rating.stars[3]" id="star4 ">&#9733</span>
+    </div>
+    <p id="summary">{{curMovie.overview}}</p>
+
+</div>

@@ -1,0 +1,22 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <img ng-click="changeMovie(firstMov)" ui-sref="details" ng-src="https://image.tmdb.org/t/p/w342{{firstMov.poster_path}}">
+        </div>
+        <div class="item" ng-repeat="movie in popMovies">
+            <img ng-click="changeMovie(movie)" ui-sref="details" ng-src="https://image.tmdb.org/t/p/w342{{movie.poster_path}}">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a id="leftControl" class="left carousel-control" ng-href="#myCarousel" data-slide="prev" target="_self">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a id="rightControl" class="right carousel-control" href="#myCarousel" data-slide="next" target="_self">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
