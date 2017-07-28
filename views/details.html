@@ -12,5 +12,8 @@
         <span ng-if="!rating.stars[3]" id="star4">☆</span> <span ng-if="rating.stars[3]" id="star4 ">&#9733</span>
     </div>
     <p id="summary">{{curMovie.overview}}</p>
-
+    <!-- <ul id='peeps'>
+        <li class="actor" ng-repeat="peeps in importantPeeps"><img ng-if="peeps.profile_path" ng-src="https://image.tmdb.org/t/p/w45{{peeps.profile_path}}"> <span class="left">{{peeps.name}}</span> <span class="right">{{peeps.character}}</span></li>
+    </ul> -->
+    <actor-car></actor-car>
 </div>

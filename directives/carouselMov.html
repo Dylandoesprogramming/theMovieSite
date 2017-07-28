@@ -5,8 +5,8 @@
         <div class="item active">
             <img ng-click="changeMovie(firstMov)" ui-sref="details" ng-src="https://image.tmdb.org/t/p/w342{{firstMov.poster_path}}">
         </div>
-        <div class="item" ng-repeat="movie in popMovies">
-            <img ng-click="changeMovie(movie)" ui-sref="details" ng-src="https://image.tmdb.org/t/p/w342{{movie.poster_path}}">
+        <div class="item" ng-repeat="movie in popMovies" ng-if="movie.poster_path">
+            <img ng-click="changeMovie(movie);" ui-sref="details" ng-src="https://image.tmdb.org/t/p/w342{{movie.poster_path}}">
         </div>
     </div>
 

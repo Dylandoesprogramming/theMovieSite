@@ -1,0 +1,26 @@
+<div id="actorCar" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <p class="actorName">{{firstPeep.name}}</p>
+            <p class="actorName">{{firstPeep.character}}</p>
+            <img ui-sref="details" ng-src="https://image.tmdb.org/t/p/w185{{firstPeep.profile_path}}">
+        </div>
+        <div class="item" ng-repeat="peeps in importantPeeps">
+            <p class="actorName">{{peeps.name}}</p>
+            <p class="actorName">{{peeps.character}}</p>
+            <img ng-src="https://image.tmdb.org/t/p/w185{{peeps.profile_path}}">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a ng-click="trackActor(-1)" id="leftControl" class="left carousel-control" ng-href="#actorCar" data-slide="prev" target="_self">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a ng-click="trackActor(1)" id="rightControl" class="right carousel-control" href="#actorCar" data-slide="next" target="_self">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

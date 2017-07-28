@@ -9,10 +9,6 @@ var app = angular.module('movieSite', ['ui.router'])
                 url: '/movie',
                 templateUrl: '../views/details.html'
             })
-            .state('about', {
-                url: '/about',
-                templateUrl: '../views/about.html'
-            })
             .state('search', {
                 url: '/search',
                 templateUrl: '../views/search.html'
