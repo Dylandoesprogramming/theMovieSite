@@ -4,8 +4,8 @@
         <h1>{{curActor.name}}</h1>
     </div>
     <img id="curPoster" ng-src="https://image.tmdb.org/t/p/h632{{curActor.profile_path}}">
-    <p id="birthDay">Birth Date: {{curActor.birthday}}</p>
-    <p id='location'>Birth Place: {{curActor.place_of_birth}}</p>
+    <p ng-if="curActor.birthday" id="birthDay">Birth Date: {{curActor.birthday}}</p>
+    <p ng-if="curActor.place_of_birth" id='location'>Birth Place: {{curActor.place_of_birth}}</p>
     <p ng-bind-html="curActor.biography"></p>
 </div>
 <!-- {{curActor.biography}} -->

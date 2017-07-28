@@ -24,8 +24,14 @@ app.controller("mainCtrl", function($scope, $window, mainSrvc) {
     $scope.changeMovie = function(movie) {
         $scope.curMovie = movie; //track current movie were using for a background
         //set a url for background change based on current movie
-        $scope.backdrop = "url(https://image.tmdb.org/t/p/w1280" + $scope.curMovie.backdrop_path + ")";
-        $('#body').css("background-image", $scope.backdrop) //set the bodies background image to the url we get from the curMovie
+        if ($scope.curMovie.backdrop_path) {
+            $scope.backdrop = "url(https://image.tmdb.org/t/p/w1280" + $scope.curMovie.backdrop_path + ")";
+            $('#body').css("background-image", $scope.backdrop) //set the bodies background image to the url we get from the curMovie
+        } else {
+            $scope.backdrop = "url(https://image.tmdb.org/t/p/w1280" + $scope.origPopMov[0].backdrop_path + ")";
+            $('#body').css("background-image", $scope.backdrop)
+        }
+
         $scope.rating.rating = Math.round($scope.curMovie.vote_average); //get the rating for curMovie and round it to an int
         $scope.rating.stars = [false, false, false, false] //set stars 1-4 to false so they are by default empty
 
