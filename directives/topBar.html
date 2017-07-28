@@ -3,7 +3,10 @@
         <li ng-click="resetMovies()" ui-sref="home" class="link">Home</li>
         <!-- <li ui-sref="about" class="link">About</li> -->
         <li>
-            <input type="text" ng-model="search" placeholder="Search for Movies"><button ng-click='findMovie(search)' ui-sref="search" type=" button ">&#128269;</button>
+            <form id="searchBar" ng-submit="findMovie(search)">
+                <input id="searchInput" type="text" ng-model="search" placeholder="Search for Movies">
+                <input id="submitButton" type="submit" ng-click='findMovie(search)' value="&#128269;" ui-sref="search"></input>
+            </form>
         </li>
     </ul>
 </navbar>

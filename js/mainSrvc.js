@@ -20,4 +20,11 @@ app.service("mainSrvc", function($http) {
             url: "https://api.themoviedb.org/3/movie/" + movieId + "/credits?api_key=" + apiKey
         })
     }
+
+    this.getPerson = function(castId) {
+        return $http({
+            method: "Get",
+            url: "https://api.themoviedb.org/3/person/" + castId + "?api_key=" + apiKey
+        })
+    }
 });

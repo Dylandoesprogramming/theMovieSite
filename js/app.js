@@ -1,4 +1,4 @@
-var app = angular.module('movieSite', ['ui.router'])
+var app = angular.module('movieSite', ['ui.router', 'ngSanitize'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
@@ -12,6 +12,10 @@ var app = angular.module('movieSite', ['ui.router'])
             .state('search', {
                 url: '/search',
                 templateUrl: '../views/search.html'
+            })
+            .state('actor', {
+                url: '/actor',
+                templateUrl: '../views/actor.html'
             })
         $urlRouterProvider.otherwise('/')
     });

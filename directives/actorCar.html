@@ -5,12 +5,12 @@
         <div class="item active">
             <p class="actorName">{{firstPeep.name}}</p>
             <p class="actorName">{{firstPeep.character}}</p>
-            <img ui-sref="details" ng-src="https://image.tmdb.org/t/p/w185{{firstPeep.profile_path}}">
+            <img ng-click="changeActor(firstPeep)" ui-sref="actor" ng-src="https://image.tmdb.org/t/p/w185{{firstPeep.profile_path}}">
         </div>
-        <div class="item" ng-repeat="peeps in importantPeeps">
+        <div class="item" ng-if="peeps.profile_path" ng-repeat="peeps in importantPeeps">
             <p class="actorName">{{peeps.name}}</p>
             <p class="actorName">{{peeps.character}}</p>
-            <img ng-src="https://image.tmdb.org/t/p/w185{{peeps.profile_path}}">
+            <img ng-click="changeActor(peeps)" ui-sref="actor" ng-src="https://image.tmdb.org/t/p/w185{{peeps.profile_path}}">
         </div>
     </div>
 

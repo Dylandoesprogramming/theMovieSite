@@ -20,6 +20,7 @@ top-bar ul {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    white-space: nowrap;
 }
 
 top-bar ul li {
@@ -30,6 +31,10 @@ top-bar ul li {
     cursor: pointer;
 }
 
+.item:hover {
+    cursor: pointer;
+}
+
 header {
     color: black;
     padding: 10% 0;
@@ -37,7 +42,7 @@ header {
 }
 
 header h1 {
-    font-size: 6em;
+    font-size: 4em;
 }
 
 #title {
@@ -79,6 +84,36 @@ header h1 {
     overflow-x: hidden;
 }
 
+.link {
+    margin: auto 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    #mainContainer {
+        width: 100%;
+        margin: 0;
+    }
+    #detailContainer {
+        width: 100%;
+        margin: 0;
+    }
+    #searchInput {
+        border: 1px solid black;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #searchInput {
+        width: 100%;
+    }
+    #submitButton {
+        display: none;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+}
+
 #curPoster {
     display: block;
     margin: 0 auto;
@@ -117,6 +152,17 @@ header h1 {
 }
 
 .actorName {
+    text-align: center;
+    font-size: 2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#birthDay,
+#location {
     text-align: center;
     font-size: 2em;
 }
