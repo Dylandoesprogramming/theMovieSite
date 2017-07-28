@@ -3,7 +3,7 @@ var app = angular.module('movieSite', ['ui.router', 'ngSanitize'])
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: './views/home.html'
+                templateUrl: '/views/home.html'
             })
             .state('details', {
                 url: '/movie',
