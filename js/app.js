@@ -7,15 +7,15 @@ var app = angular.module('movieSite', ['ui.router', 'ngSanitize'])
             })
             .state('details', {
                 url: '/movie',
-                templateUrl: './views/details.html'
+                templateUrl: '/views/details.html'
             })
             .state('search', {
                 url: '/search',
-                templateUrl: './views/search.html'
+                templateUrl: '/views/search.html'
             })
             .state('actor', {
                 url: '/actor',
-                templateUrl: './views/actor.html'
+                templateUrl: '/views/actor.html'
             })
         $urlRouterProvider.otherwise('/')
     });

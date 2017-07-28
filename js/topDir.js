@@ -1,6 +1,6 @@
 app.directive('topBar', function() {
     return {
         restrict: 'E',
-        templateUrl: './directives/topBar.html',
+        templateUrl: '/directives/topBar.html',
     }
 })
